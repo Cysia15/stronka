@@ -5,7 +5,7 @@ document.querySelector('.gb3').addEventListener('click', function () {
     window.location.href = 'p3.html'; 
 });
 document.querySelector('.gb0').addEventListener('click', function () {
-    window.location.href = 'main.html'; 
+    window.location.href = 'index.html'; 
 });
 const hoverSound = new Audio('swoosh.mp3'); 
 
