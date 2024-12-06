@@ -1,0 +1,21 @@
+document.querySelector('.gb1').addEventListener('click', function () {
+    window.location.href = 'podstrona.html'; 
+});
+document.querySelector('.gb3').addEventListener('click', function () {
+    window.location.href = 'p3.html'; 
+});
+document.querySelector('.gb0').addEventListener('click', function () {
+    window.location.href = 'index.html'; 
+});
+const hoverSound = new Audio('swoosh.mp3'); 
+
+function playHoverSound() {
+    hoverSound.currentTime = 0; // 
+    hoverSound.play().catch((error) => {
+        console.error("Nie można odtworzyć dźwięku:", error);
+    });
+}
+
+document.querySelector('.gb1').addEventListener('mouseenter', playHoverSound);
+document.querySelector('.gb3').addEventListener('mouseenter', playHoverSound);
+document.querySelector('.gb0').addEventListener('mouseenter', playHoverSound);

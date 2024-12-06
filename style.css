@@ -1,0 +1,88 @@
+body {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    padding: 50px;
+    background-color: #233142;
+}
+
+.header {
+    background-color: #455d7a;
+    text-align: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 40px;
+    padding: 30px;
+    border-radius: 30px;
+    margin-bottom: 10px; /* EJ EJ EJ TROCHE PRZESTRZENI MI TU */
+}
+
+.blok-container {
+    display: flex; /* bloki beda siebie */
+    justify-content: center; /*  bloki na środku */
+    gap: 10px; /*LALALALAL Odstęp między blokami */
+}
+.gif
+{
+    text-align: center;
+   
+}
+.gb1, .gb2, .gb3,.gb0 {
+    padding: 20px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    background-color: gray;
+    color: white;
+    font-size: 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    height: 130px;
+    width: 210px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.gb1:hover, .gb2:hover, .gb3:hover,.gb0:hover {
+    background-color: green;
+}
+
+.iframe
+{
+    margin: 0;
+    
+}
+.podmain
+{
+    background-color: #455d7a;
+    text-align: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 25px;
+    padding: 30px;
+    border-radius: 40px;
+    
+}
+.p2
+{
+    background-color: #455d7a;
+    text-align: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 25px;
+    padding: 30px;
+    border-radius: 40px;
+    
+}
+.p2a
+{
+    background-color: wheat;
+    text-align: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 25px;
+    padding: 30px;
+    border-radius: 40px;
+}
+.p3a
+{
+    background-color: wheat;
+    text-align: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 25px;
+    padding: 30px;
+    border-radius: 40px;
+}
