@@ -19,5 +19,5 @@ function playHoverSound() {
 }
 
 document.querySelector('.gb1').addEventListener('mouseenter', playHoverSound);
+document.querySelector('.gb2').addEventListener('mouseenter', playHoverSound);
 document.querySelector('.gb3').addEventListener('mouseenter', playHoverSound);
-document.querySelector('.gb0').addEventListener('mouseenter', playHoverSound);
