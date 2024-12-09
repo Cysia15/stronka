@@ -138,8 +138,8 @@ font-size: 20px;
 }
 
 .skater {
-    width: 120px;  /* Mniejszy gracz */
-    height: 100px; /* Mniejszy gracz */
+    width: 120px;
+    height: 100px;
     object-fit: cover;
     background-image: url('jazda.jpg');
     background-size: cover;
@@ -148,15 +148,15 @@ font-size: 20px;
     left: 50px;
 }
 .skater img {
-    width: 120px;  /* Stała szerokość gracza */
-    height: 100px; /* Stała wysokość gracza */
-    object-fit: cover; /* Zapewnia, że obraz nie będzie zniekształcony */
+    width: 120px;  
+    height: 100px;
+    object-fit: cover; 
 }
 
 
 .obstacle {
-    width: 40px;  /* Mniejsza przeszkoda */
-    height: 50px; /* Mniejsza przeszkoda */
+    width: 40px; 
+    height: 50px;
     background-color: blueviolet;
     position: absolute;
     bottom: 50px;
