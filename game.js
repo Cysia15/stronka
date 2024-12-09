@@ -8,14 +8,17 @@ let isJumping = false;
 let isGameOver = false;
 let obstaclePassed = false;
 let bestScore = localStorage.getItem('bestScore') || 0;  
+let obstacleSpeedMultiplier = 1;  // Mnożnik prędkości przeszkód (domyślnie normalny)
+
 bestScoreDisplay.textContent = `Najlepszy wynik: ${bestScore}`;
+
 function jump() {
     if (isJumping || isGameOver) return;
     isJumping = true;
     gracz.src = 'jazda.gif';
     let jumpHeight = 0;
     const upInterval = setInterval(() => {
-        if (jumpHeight >= 160) {  // Mniejsza wysokość skoku
+        if (jumpHeight >= 200) {  // Mniejsza wysokość skoku
             clearInterval(upInterval);
             const downInterval = setInterval(() => {
                 if (jumpHeight <= 0) {
@@ -24,14 +27,15 @@ function jump() {
                     skater.style.bottom = '50px'; 
                     gracz.src = 'jazda.jpg';
                 }
-                jumpHeight -= 6;  
+                jumpHeight -= 8;  
                 skater.style.bottom = `${50 + jumpHeight}px`;  
             }, 20);
         }
-        jumpHeight += 6;  
+        jumpHeight += 8;  
         skater.style.bottom = `${50 + jumpHeight}px`;  
     }, 20);
 }
+
 function moveObstacle() {
     let obstaclePosition = 800;
     const obstacleInterval = setInterval(() => {
@@ -39,7 +43,7 @@ function moveObstacle() {
             clearInterval(obstacleInterval);
             return;
         }
-        obstaclePosition -= 4; 
+        obstaclePosition -= 4 * obstacleSpeedMultiplier;  // Prędkość przeszkody zależna od trudności
         obstacle.style.left = `${obstaclePosition}px`;
 
         const skaterBottom = parseInt(window.getComputedStyle(skater).bottom);
@@ -67,17 +71,38 @@ function moveObstacle() {
         }
     }, 20);
 }
+
+// Obsługuje przyciski trudności
+const easyBtn = document.getElementById('easyBtn');
+const normalBtn = document.getElementById('normalBtn');
+const hardBtn = document.getElementById('hardBtn');
+
+easyBtn.addEventListener('click', () => {
+    obstacleSpeedMultiplier = 1; 
+});
+
+normalBtn.addEventListener('click', () => {
+    obstacleSpeedMultiplier = 2; 
+});
+
+hardBtn.addEventListener('click', () => {
+    obstacleSpeedMultiplier = 3;
+});
+
 const gameButton = document.getElementById('gameButton');
 const gameContainer = document.getElementById('gameContainer');
+const difficultyButtons = document.querySelector('.difficulty');
 
 gameButton.addEventListener('click', () => {
-    gameContainer.style.display = 'block'; 
-    gameButton.style.display = 'none'; 
+    gameContainer.style.display = 'block';  // Pokaż grę
+    gameButton.style.display = 'none';  // Ukryj przycisk startowy
+    difficultyButtons.style.display = 'block';  // Pokaż przyciski trudności
 });
+
 document.addEventListener('keydown', (e) => {
     if (e.code === 'Space') {
         jump();
     }
 });
 
-moveObstacle();
+moveObstacle(); // Rozpocznij poruszanie przeszkody

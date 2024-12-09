@@ -9,7 +9,7 @@
 <body>
     <div class="gbm">
         <img src="deska.png" width="40px">
-        <Script src="gbm.js"></Script>
+        <script src="gbm.js"></script>
     </div>
     <div class="header">
         Jazda na desce
@@ -26,26 +26,41 @@
     </div>
     <div class="kot">
         <img src="kots.png" alt="Statyczny kot" id="kot-img">
-    <script src="kot.js"></script>
+        <script src="kot.js"></script>
     </div>
 
     <div class="game-toggle">
         <img src="ukryty.jpg" alt="Pokaż grę" id="gameButton" />
     </div>
 
-    
-    <div id="gameContainer">
+    <div id="gameContainer" style="display: none;"> <!-- Gra ukryta początkowo -->
         <div class="skater">
             <img src="jazda.jpg" alt="Gracz" id="gracz">
         </div>
         <div class="obstacle"></div>
         <div class="score">Punkty: 0</div>
         <div class="best-score">Najlepszy wynik: 0</div>
-        </div>
+    </div>
+
+    <div class="difficulty" style="display: none;"> <!-- Przyciski trudności ukryte początkowo -->
+        <button id="easyBtn">Łatwy</button>
+        <button id="normalBtn">Normalny</button>
+        <button id="hardBtn">Trudny</button>
     </div>
 
     <script src="game.js"></script> <!-- Skrypt JavaScript gry -->
-
     <script src="index.js"></script>
+    <script>
+        // Funkcja do wyświetlania gry i przycisków trudności
+        const gameButton = document.getElementById('gameButton');
+        const gameContainer = document.getElementById('gameContainer');
+        const difficultyButtons = document.querySelector('.difficulty');
+
+        gameButton.addEventListener('click', () => {
+            gameContainer.style.display = 'block';  // Pokaż grę
+            gameButton.style.display = 'none';  // Ukryj przycisk startowy
+            difficultyButtons.style.display = 'block';  // Pokaż przyciski trudności
+        });
+    </script>
 </body>
 </html>

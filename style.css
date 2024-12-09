@@ -19,12 +19,12 @@ body {
     justify-content: center; /*  bloki na środku */
     gap: 10px; /*LALALALAL Odstęp między blokami */
 }
-.gif
-{
+
+.gif {
     text-align: center;
-   
 }
-.gb1, .gb2, .gb3,.gb0{
+
+.gb1, .gb2, .gb3, .gb0 {
     padding: 20px;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     background-color: gray;
@@ -39,37 +39,33 @@ body {
     margin-bottom: 40px;
 }
 
-.gb1:hover, .gb2:hover, .gb3:hover,.gb0:hover {
+.gb1:hover, .gb2:hover, .gb3:hover, .gb0:hover {
     background-color: green;
 }
 
-.iframe
-{
+.iframe {
     margin: 0;
-    
 }
-.podmain
-{
+
+.podmain {
     background-color: #455d7a;
     text-align: center;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     font-size: 25px;
     padding: 30px;
     border-radius: 40px;
-    
 }
-.p2
-{
+
+.p2 {
     background-color: #455d7a;
     text-align: center;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     font-size: 25px;
     padding: 30px;
     border-radius: 40px;
-    
 }
-.p2a
-{
+
+.p2a {
     background-color: wheat;
     text-align: center;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
@@ -77,8 +73,8 @@ body {
     padding: 30px;
     border-radius: 40px;
 }
-.p3a
-{
+
+.p3a {
     background-color: wheat;
     text-align: center;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
@@ -86,31 +82,32 @@ body {
     padding: 30px;
     border-radius: 40px;
 }
-.gbm
-{
-text-align: center;
-font-size: 20px;
+
+.gbm {
+    text-align: center;
+    font-size: 20px;
 }
-.kot img
-{
-    position-anchor:inherit;
-    text-align: center; 
+
+.kot img {
+    position-anchor: inherit;
+    text-align: center;
     height: 200px;
     width: 200px;
     border-radius: 50%;
     display: block;
     background-color: wheat;
 }
-.kot:hover img
-{
-    position-anchor:inherit;
-    text-align: center; 
+
+.kot:hover img {
+    position-anchor: inherit;
+    text-align: center;
     height: 200px;
     width: 200px;
     border-radius: 50%;
     display: block;
     background-color: wheat;
 }
+
 .game-toggle {
     position: fixed;
     bottom: 20px;
@@ -131,7 +128,7 @@ font-size: 20px;
     transform: translateX(-50%);
     width: 100%;
     height: 500px;
-    background-color: #233d42;
+    background-color: #35b3cb;
     text-align: center;
     display: none;
     padding: 10px;
@@ -147,15 +144,15 @@ font-size: 20px;
     bottom: 50px;
     left: 50px;
 }
+
 .skater img {
-    width: 120px;  
+    width: 120px;
     height: 100px;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
-
 .obstacle {
-    width: 40px; 
+    width: 40px;
     height: 50px;
     background-color: blueviolet;
     position: absolute;
@@ -185,4 +182,27 @@ font-size: 20px;
     transform: translateX(-50%);
     color: white;
     font-size: 18px;
+}
+
+.difficulty {
+    display: none; /* Ukryj przyciski trudności na początku */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.difficulty button {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #455d7a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.difficulty button:hover {
+    background-color: green;
 }
