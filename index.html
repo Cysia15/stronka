@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="gbm">
+        <img src="deska.png" width="40px">
+        <Script src="gbm.js"></Script>
+    </div>
     <div class="header">
         Jazda na desce
     </div>
@@ -20,6 +24,27 @@
     <div class="gif">
         <video crossorigin="anonymous" draggable="true" class="giphy-video" width="40%" height="40%" muted autoplay playsinline src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2plMGRyOWlhamkzMnAyNXM5YzE3ZXczN2loZndmM3lvOGxibDY1dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9diZjYz1lbg/I4VnJnYuGRbPqNd2zh/giphy480p.mp4" data-giphy-id="I4VnJnYuGRbPqNd2zh"></video>
     </div>
+    <div class="kot">
+        <img src="kots.png" alt="Statyczny kot" id="kot-img">
+    <script src="kot.js"></script>
+    </div>
+
+    <div class="game-toggle">
+        <img src="ukryty.jpg" alt="Pokaż grę" id="gameButton" />
+    </div>
+
+    
+    <div id="gameContainer">
+        <div class="skater">
+            <img src="jazda.jpg" alt="Gracz" id="gracz">
+        </div>
+        <div class="obstacle"></div>
+        <div class="score">Punkty: 0</div>
+        <div class="best-score">Najlepszy wynik: 0</div>
+        </div>
+    </div>
+
+    <script src="game.js"></script> <!-- Skrypt JavaScript gry -->
 
     <script src="index.js"></script>
 </body>
